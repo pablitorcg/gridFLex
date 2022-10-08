@@ -1,0 +1,416 @@
+*{ box-sizing: border-box;}
+
+body{
+    font-family: sans-serif ;
+    margin: 0;
+    background-color: rgb(245, 245, 245);
+}
+h1{font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{ list-style: none;}
+li{font-size: 1.25em;}
+
+button{
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+}
+button:hover{
+    background-color: rgb(88, 26, 147);
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+    background-color: rgb(245, 245, 245);
+}
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    width: 200px;
+    height: 200px;
+}
+header .carro{
+    margin: 0;
+    padding: 25px 30px;
+    width: 100px;
+    height: 100px;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+.descuentos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image:  linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    )
+    ,url("../assets/img/oferta.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+.encabezado{
+    text-align: center;
+}
+
+#menuPri{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+#menuPri .container{
+    padding: 150px 12px;
+}
+#menuPri h2{
+    margin-top: 0;
+}
+#menuPri p{
+    display: none;
+}
+#menuPri .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    )
+    ,url("../assets/img/1.jpeg");
+    
+}
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    )
+    ,url("../assets/img/2.jpeg");
+    
+
+}
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    )
+    ,url("../assets/img/3.jpeg");
+
+}
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    )
+    ,url("../assets/img/a1.jpeg");
+
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+#caracteristicas li{
+    margin: 15px 0px;
+    font-weight: bold;
+}
+/*grids*/
+.gridContenedor{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+}
+.redes a img{width: 15%;}
+.descuentos div{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px;
+    width: 60%;
+    margin: 100px auto;
+    
+
+}
+.descuentos{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.encabezado h1{
+    font-size: 2em;
+    color: blueviolet;
+}
+.fav img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    padding: 2px;
+}
+.menuFotos img{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin:5px ;
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);    
+}
+.menu1 ul li button{
+    margin: 10px;
+    padding: 2px;
+    background-color: rgb(247, 164, 229);
+    
+}
+.fav img{
+    display: flex;
+    width: 90%;
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);   
+}
+
+/*media destop*/
+@media only screen and (min-width:720px){
+    header{
+        
+        top: 0;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+    .descuentos div{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        width: 60%;
+        margin: 0px auto;
+        position: relative;
+    top: 110px;
+        
+    
+    }
+    .descuentos{
+        display: flex;
+        justify-content: flex-end;
+    
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+        }
+        main{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+            grid-area: 
+            "descuentos"
+            "encabezado"
+            "subT"
+            "form";
+        }
+        .descuentos{
+            grid-area: "descuentos";
+        }
+        .encabezado{
+            grid-area: "encabezado";
+            
+        }
+        .subT{
+            grid-area: "subT";
+        }
+        .form{
+            grid-area: "form";
+        }
+        .subT{
+            display: flex;
+            flex-direction: column;
+            align-items: center ;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center ;
+        }
+        .encabezado h1{
+            font-size: 2.9em;
+            color: blueviolet;
+
+        }
+        .fav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        .fav img{
+            width: 22%;
+            
+        }
+        .nuestro{
+            display: flex;
+            justify-content: center;
+            color: rgb(234, 30, 129);
+        }
+        main{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(7, auto);
+            grid-area: 
+            "descuentos"
+            "encabezado"
+            "new"
+            "menu1"
+            "menuFotos"
+            "film"
+            "videos";}
+
+        .descuentos{
+            grid-area: "descuentos";
+        }    
+        .encabezado{
+            grid-area: "encabezado";
+        }
+        .new{
+            grid-area: "new";
+        }
+        .menu1{
+            grid-area: "menu1";
+        }
+        .menuFotos{
+            grid-area: "menuFotos";
+        }
+        .film{
+            grid-area: "film";
+        }
+        .videos{
+            grid-area: "videos";
+        }   
+        .menuFotos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            
+        }
+        .menuFotos img{
+            width: 20%;
+            margin: 4px;
+            padding: 2px;
+        
+            
+        }
+    
+        .menu1 ul{
+            display: flex;
+            flex-direction: row; 
+            
+
+        }
+        .menu1 ul li button{
+            margin: 50px;          
+            }
+        
+
+
+        .encabezado h1{
+            display: flex;
+            justify-content: center;
+            font-size: 3em;
+        }
+        .new h3{
+            display: flex;
+            justify-content: center;
+        }
+        .film h3{
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 10px;
+        }
+        .videos{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        
+        }
+        .videos iframe{
+            margin: 10px;
+        }
+        .menuFotos{
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+
+}
